@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mapa de Procesos — Peluquería</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    padding: 40px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #f0f0f0;
+  }
+  header h1 {
+    font-size: 2rem;
+    color: #1a1a2e;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  header p {
+    color: #666;
+    margin-top: 8px;
+    font-size: 0.95rem;
+  }
+  .leyenda {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+  }
+  .leyenda span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+  }
+  .punto {
+    width: 16px; height: 16px; border-radius: 50%;
+    display: inline-block;
+  }
+  .punto.estrategico { background: #1A73E8; }
+  .punto.operativo   { background: #F9AB00; }
+  .punto.apoyo       { background: #34A853; }
+  .mermaid { text-align: center; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💇 Mapa de Procesos — Peluquería</h1>
+      <p>Haz clic en los procesos operativos para ver sus subprocesos</p>
+    </header>
+
+    <div class="leyenda">
+      <span><i class="punto estrategico"></i> Estratégicos</span>
+      <span><i class="punto operativo"></i> Operativos (clicables)</span>
+      <span><i class="punto apoyo"></i> Apoyo</span>
+    </div>
+
+    <pre class="mermaid">
+      %% Pega aquí el código Mermaid de arriba %%
+    </pre>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'loose',
+      theme: 'base'
+    });
+  </script>
+</body>
+</html>

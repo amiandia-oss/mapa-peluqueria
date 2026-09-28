@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Subprocesos — Prestación del Servicio</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFE082 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  .card {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    padding: 40px;
+    border-top: 6px solid #F9AB00;
+  }
+  h1 {
+    color: #7A4F00;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  .sub { color: #999; margin-bottom: 30px; }
+  .volver {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: #F9AB00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .volver:hover { background: #d68f00; transform: translateY(-2px); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>✂️ Prestación del Servicio</h1>
+    <p class="sub">Subprocesos detallados · Tiempos estimados por paso</p>
+
+    <pre class="mermaid">
+      %%{init: {'theme':'base','themeVariables':{
+        'fontFamily':'Poppins, sans-serif',
+        'primaryColor':'#FFF8E1',
+        'primaryTextColor':'#7A4F00',
+        'primaryBorderColor':'#F9AB00',
+        'lineColor':'#F9AB00'
+      }}}%%
+      flowchart LR
+        A["1️⃣ Recepción<br/>del cliente<br/><b>7 min</b>"]
+        B["2️⃣ Asignación<br/>a profesional<br/><b>1 min</b>"]
+        C["3️⃣ Lavado<br/>de cabello<br/><b>9 min</b>"]
+        D["4️⃣ Corte /<br/>Tratamiento<br/><b>18-33 min</b>"]
+        E["5️⃣ Secado<br/>y peinado<br/><b>7 min</b>"]
+        F["6️⃣ Verificación<br/>con cliente<br/><b>1 min</b>"]
+        G["7️⃣ Cobro<br/>y despedida<br/><b>2 min</b>"]
+
+        A --> B --> C --> D --> E --> F --> G
+
+        classDef paso fill:#FFF8E1,stroke:#F9AB00,stroke-width:2px,color:#7A4F00,rx:12,ry:12
+        class A,B,C,D,E,F,G paso
+    </pre>
+
+    <a href="mapa-principal.html" class="volver">← Volver al mapa principal</a>
+  </div>
+
+  <script>
+    mermaid.initialize({ startOnLoad:true, securityLevel:'loose' });
+  </script>
+</body>
+</html>
